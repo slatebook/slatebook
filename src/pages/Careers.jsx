@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import PranjalImage from "../assets/images/Pranjal.jpg"
+import AnuragImage from "../assets/images/Anurag.jpg"
 
 const Careers = () => {
   const [selectedDepartment, setSelectedDepartment] = useState('All');
@@ -187,21 +189,15 @@ const Careers = () => {
   const testimonials = [
     {
       name: 'Pranjal',
-      role: 'Senior Developer',
-      image: '👨‍💻',
+      role: 'Founder & CEO',
+      image: PranjalImage,
       quote: 'Working at SlateBook has been incredible. The team is supportive, the mission is meaningful, and I learn something new every day.'
     },
     {
-      name: 'Mohit Singh',
-      role: 'Product Designer',
-      image: '👩‍🎨',
-      quote: 'I love how much autonomy we have here. My ideas are heard and implemented. It\'s truly a place where creativity thrives.'
-    },
-    {
-      name: 'Anurag Patel',
-      role: 'Marketing Lead',
-      image: '👨‍💼',
-      quote: 'The impact we make on students\' lives is what drives me. SlateBook is more than a job—it\'s a mission I believe in.'
+      name: 'Anurag',
+      role: 'Co-Founder & COO',
+      image: AnuragImage,
+      quote: 'The impact we make on students\' lives is what drives me. SlateBook is more than a job it\'s a mission I believe in.'
     }
   ];
 
@@ -409,7 +405,8 @@ const Careers = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 gap-6">
-            {filteredJobs.map((job, index) => (
+            {filteredJobs.length > 0 ? <><h1 className='text-center font-bold text-base  sm:text-2xl'>No positions found</h1></>:
+            <>{filteredJobs.map((job, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -468,7 +465,7 @@ const Careers = () => {
                   </div>
                   
                   <motion.a
-                    href="/#contact"
+                    href="/"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="shrink-0 bg-linear-to-r from-[#16a34a] to-[#22c55e] text-[#1a1a1a] font-semibold py-3 px-6 rounded-lg text-center hover:shadow-lg transition-all duration-300"
@@ -477,7 +474,7 @@ const Careers = () => {
                   </motion.a>
                 </div>
               </motion.div>
-            ))}
+            ))}</>}
           </div>
 
           {filteredJobs.length === 0 && (
@@ -563,7 +560,7 @@ const Careers = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -575,7 +572,7 @@ const Careers = () => {
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-16 h-16 bg-linear-to-br from-[#262626] to-[#1a1a1a] rounded-full flex items-center justify-center text-3xl border-2 border-[#333333]">
-                    {testimonial.image}
+                    <img src={testimonial.image} alt={testimonial.name} className="w-full h-full object-cover rounded-full" />
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-white">{testimonial.name}</h4>
@@ -608,7 +605,7 @@ const Careers = () => {
               We're always looking for talented people. Send us your resume and let's talk about how you can contribute to SlateBook's mission.
             </p>
             <motion.a
-              href="/#contact"
+              href="/"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-block bg-linear-to-r from-[#16a34a] to-[#22c55e] text-[#1a1a1a] font-semibold py-4 px-8 rounded-lg text-lg shadow-lg hover:shadow-xl hover:shadow-[#16a34a]/50 transition-all duration-300"

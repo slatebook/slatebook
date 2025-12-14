@@ -1,39 +1,43 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import PranjalImage from "../assets/images/Pranjal.jpg"
+import AnuragImage from "../assets/images/Anurag.jpg"
+import MohitImage from "../assets/images/Mohit.jpg"
+import SarvajeeetImage from "../assets/images/Sarvajeet.jpg"
 
 const Team = () => {
   const teamMembers = [
     {
       name: 'Pranjal',
       role: 'Founder & CEO',
-      bio: 'Visionary entrepreneur passionate about making education accessible. Former IIT graduate with a mission to revolutionize student learning.',
-      email: 'arjun@slatebook.com',
-      linkedin: 'https://linkedin.com/in/arjunsharma',
-      image: '👨‍💼' // Placeholder emoji, replace with actual image
+      bio: 'Technologist and entrepreneur who started coding at 13, founded Web3 ventures, and is building Slatebook an innovative electronic book with infinite pages and permanent memory.',
+      email: 'em25mtech11004@iith.ac.in',
+      linkedin: 'https://www.linkedin.com/in/0xpranjl/',
+      image: PranjalImage
     },
     {
       name: 'Anurag',
-      role: 'Co-Founder & CTO',
-      bio: 'Tech genius leading our AI development. Expert in machine learning and cloud architecture with 10+ years of experience.',
-      email: 'priya@slatebook.com',
-      linkedin: 'https://linkedin.com/in/priyapatel',
-      image: '👩‍💻' // Placeholder emoji
+      role: 'Co-Founder & COO',
+      bio: 'Psychology and data science professional, founder of SketchMEE, NPTEL Star achiever, entrepreneur, and strategist with strong expertise in human behavior, analytics, and business growth.',
+      email: '23f2000838@ds.study.iitm.ac.in',
+      linkedin: 'https://www.linkedin.com/in/siranurag/',
+      image: AnuragImage
     },
     {
       name: 'Sarvajeet',
-      role: 'Lead Developer',
-      bio: 'Full-stack developer building seamless user experiences. Passionate about clean code and innovative solutions.',
-      email: 'rahul@slatebook.com',
-      linkedin: 'https://linkedin.com/in/rahulmehta',
-      image: '👨‍💻' // Placeholder emoji
+      role: 'Developer',
+      bio: 'Full-stack developer specializing in scalable web applications using modern JavaScript frameworks, APIs, and cloud technologies, with hands-on experience in building production-ready digital products.',
+      email: 'sarvajeetshahktn@gmail.com',
+      linkedin: 'https://www.linkedin.com/in/sarvajeet-lal-shah-928280274/',
+      image: SarvajeeetImage
     },
     {
       name: 'Mohit',
       role: 'Product Manager',
-      bio: 'Strategic thinker ensuring SlateBook meets every student\'s needs. Background in education technology and user research.',
-      email: 'sneha@slatebook.com',
-      linkedin: 'https://linkedin.com/in/snehaverma',
-      image: '👩‍💼' // Placeholder emoji
+      bio: 'Full-stack developer contributing to Slatebook’s product development, working across frontend and backend systems to build reliable, user-focused, and scalable application features.',
+      email: 'Rajpootmohit1010@gmail.com',
+      linkedin: 'https://www.linkedin.com/in/mohit-singh-84393b270/',
+      image: MohitImage
     }
   ];
 
@@ -76,9 +80,9 @@ const Team = () => {
               <div className="bg-[#262626] rounded-xl p-6 border border-[#333333] hover:border-[#16a34a] transition-all duration-300 hover:shadow-xl hover:shadow-[#16a34a]/10 h-full flex flex-col">
                 {/* Image Placeholder */}
                 <div className="relative mb-4">
-                  <div className="w-full aspect-square bg-linear-to-br from-[#262626] to-[#1a1a1a] rounded-lg flex items-center justify-center text-6xl md:text-7xl border-2 border-[#333333] group-hover:border-[#16a34a] transition-all duration-300">
-                    {member.image}
-                  </div>
+                  <img className="w-full aspect-square bg-linear-to-br from-[#262626] to-[#1a1a1a] rounded-lg flex items-center justify-center text-6xl md:text-7xl border-2 border-[#333333] group-hover:border-[#16a34a] transition-all duration-300"
+                    src={member.image} alt={member.name}
+                  />
                   {/* Role Badge */}
                   <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-linear-to-r from-[#16a34a] to-[#22c55e] px-4 py-1 rounded-full">
                     <span className="text-xs md:text-sm font-semibold text-[#1a1a1a] whitespace-nowrap">
@@ -95,7 +99,7 @@ const Team = () => {
                   </h3>
 
                   {/* Bio */}
-                  <p className="text-sm md:text-base text-[#e5e5e5] mb-4 text-center leading-relaxed flex-1">
+                  <p className="text-sm md:text-base text-[#e5e5e5] mb-2 text-left leading-relaxed flex-1">
                     {member.bio}
                   </p>
 

@@ -2,52 +2,53 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import PranjalImage from "../assets/images/Pranjal.jpg"
+import AnuragImage from "../assets/images/Anurag.jpg"
+import MohitImage from "../assets/images/Mohit.jpg"
+import SarvajeeetImage from "../assets/images/Sarvajeet.jpg"
 
 const TeamPage = () => {
   const teamMembers = [
     {
       name: 'Pranjal',
       role: 'Founder & CEO',
-      bio: 'Visionary entrepreneur passionate about making education accessible. Former IIT graduate with a mission to revolutionize student learning.',
-      fullBio: 'With over 8 years of experience in education technology, Pranjal founded SlateBook after witnessing students struggle with expensive digital notebooks. His vision is to democratize smart learning tools for every student in India and beyond.',
-      email: 'pranjal@slatebook.com',
-      linkedin: 'https://linkedin.com/in/pranjal',
-      image: '👨‍💼',
-      expertise: ['Product Strategy', 'Business Development', 'EdTech Innovation'],
-      achievements: ['Built 3 successful startups', 'Featured in Forbes 30 Under 30', 'TEDx Speaker']
+      fullBio: 'Pranjal Maurya is a self-taught technologist and entrepreneur who started coding at 13, built complex web systems, and founded a Web3 startup early in his career. After clearing GATE and joining IIT Hyderabad, he chose to drop out to build Slatebook full-time an ultra-affordable electronic book with infinite pages and permanent memory, backed by a provisional patent and real-world testing.',
+      email: 'em25mtech11004@iith.ac.in',
+      linkedin: 'https://www.linkedin.com/in/0xpranjl/',
+      image: PranjalImage,
+      expertise: ['Web Systems', 'Blockchain', 'Product Engineering'],
+      achievements: ['Founded Web3 startup UCPI', 'Received Fantom Foundation grant', 'Cleared GATE exam','Designed custom authentication protocol (dAuth)']
     },
     {
       name: 'Anurag',
-      role: 'Co-Founder & CTO',
-      bio: 'Tech genius leading our AI development. Expert in machine learning and cloud architecture with 10+ years of experience.',
-      fullBio: 'Anurag brings deep technical expertise from his tenure at top tech companies. He leads the AI and machine learning initiatives at SlateBook, ensuring our handwriting recognition and smart features are best-in-class.',
-      email: 'anurag@slatebook.com',
-      linkedin: 'https://linkedin.com/in/anurag',
-      image: '👨‍💻',
-      expertise: ['AI/ML', 'Cloud Architecture', 'System Design'],
-      achievements: ['Ex-Google Engineer', 'Published 15+ research papers', 'AI Patent Holder']
+      role: 'Co-Founder & COO',
+      fullBio: 'Anurag Thakur Ⓥ is a student at IIT Madras (BS Data Science) and Delhi University (Psychology Honours). A psychology expert with 3+ years of experience, founder of SketchMEE, polymath with 100+ certifications, ex-Head of BIHAAN.org, and followed by 20K+ professionals on LinkedIn.',
+      email: '23f2000838@ds.study.iitm.ac.in',
+      linkedin: 'https://www.linkedin.com/in/siranurag/',
+      image: AnuragImage,
+      expertise: ['Business Strategy', 'Data Science', 'Behavioral Psychology'],
+      achievements: ['Founder, SketchMEE', '5× NPTEL Star Certified (1 of 283 pan-India)', '100+ Certifications (IITs, NITTTR, NITs, AICTE)','Wadhwani Foundation – Recognized Entrepreneur (Cohort 8.3, 2025)','Business strategist At Prashant Kumar LTD UK']
     },
     {
       name: 'Sarvajeet',
-      role: 'Lead Developer',
-      bio: 'Full-stack developer building seamless user experiences. Passionate about clean code and innovative solutions.',
-      fullBio: 'Sarvajeet is the wizard behind SlateBook\'s smooth user interface and robust backend. His attention to detail ensures every interaction is intuitive and delightful for students.',
-      email: 'sarvajeet@slatebook.com',
-      linkedin: 'https://linkedin.com/in/sarvajeet',
-      image: '👨‍💻',
-      expertise: ['React', 'Node.js', 'UI/UX Design'],
-      achievements: ['Built apps used by 1M+ users', 'Open source contributor', 'Hackathon Winner']
+      role: 'Developer',
+      fullBio: 'I’m a full-stack developer building scalable web applications with Next.js, React, Node.js, and Express.js, with experience across frontend, backend, APIs, authentication, cloud services, and CI/CD to deliver production-ready solutions.',
+      email: 'sarvajeetshahktn@gmail.com',
+      linkedin: 'https://www.linkedin.com/in/sarvajeet-lal-shah-928280274/',
+      image: SarvajeeetImage,
+      expertise: ['Full-Stack Development', 'Backend APIs','Cloud Integration'],
+      achievements: ['1 year of experience as an SDE', 'Backend APIs','Cloud Integration','Worked on production-grade products serving over 1 lakh users','Handled the frontend development of client projects']
     },
     {
       name: 'Mohit',
       role: 'Product Manager',
       bio: 'Strategic thinker ensuring SlateBook meets every student\'s needs. Background in education technology and user research.',
       fullBio: 'Mohit bridges the gap between technology and user needs. With his background in psychology and EdTech, he ensures SlateBook truly solves student problems.',
-      email: 'mohit@slatebook.com',
-      linkedin: 'https://linkedin.com/in/mohit',
-      image: '👨‍💼',
-      expertise: ['Product Management', 'User Research', 'Agile Methodology'],
-      achievements: ['Scaled 2 products to 100K+ users', 'Former Product Lead at EdTech Unicorn', 'MBA from IIM']
+      email: 'Rajpootmohit1010@gmail.com',
+      linkedin: 'https://www.linkedin.com/in/mohit-singh-84393b270/',
+      image: MohitImage,
+      expertise: ['AI Agents', 'Full-Stack Development', 'DevOps'],
+      achievements: ['Demonstrated strong responsibility and professionalism', 'Delivered consistent and positive project outcomes', 'Contributed effectively to assigned projects']
     }
   ];
 
@@ -181,7 +182,7 @@ const TeamPage = () => {
                     <div className="flex items-start gap-4 md:gap-6 mb-6">
                       <div className="relative shrink-0">
                         <div className="w-20 h-20 md:w-24 md:h-24 bg-linear-to-br from-[#262626] to-[#1a1a1a] rounded-xl flex items-center justify-center text-4xl md:text-5xl border-2 border-[#333333] group-hover:border-[#16a34a] transition-all duration-300">
-                          {member.image}
+                          <img className="w-full h-full object-cover rounded-xl" src={member.image} alt={member.name} />
                         </div>
                       </div>
                       <div className="flex-1">
@@ -218,8 +219,8 @@ const TeamPage = () => {
                       <h4 className="text-sm font-semibold text-[#16a34a] mb-2">Achievements:</h4>
                       <ul className="space-y-1">
                         {member.achievements.map((achievement, idx) => (
-                          <li key={idx} className="text-xs md:text-sm text-[#e5e5e5] flex items-start gap-2">
-                            <span className="text-[#16a34a] mt-1">•</span>
+                          <li key={idx} className="text-xs md:text-sm text-[#e5e5e5] flex items-start sm:items-center gap-2">
+                            <span className="text-[#16a34a]">•</span>
                             <span>{achievement}</span>
                           </li>
                         ))}
@@ -369,9 +370,12 @@ const TeamPage = () => {
               We're always looking for passionate individuals who want to make a real impact in education. 
               Check out our open positions and become part of something special.
             </p>
+            <div className='pb-10 font-semibold text-base'>
+              Mail us at : <a href="mailto:careers@slatebook.com" className='hover:text-[#16a34a]'>careers@slatebook.com</a>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
-                href="/#contact"
+                href="/careers"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-block bg-linear-to-r from-[#16a34a] to-[#22c55e] text-[#1a1a1a] font-semibold py-4 px-8 rounded-lg text-lg shadow-lg hover:shadow-xl hover:shadow-[#16a34a]/50 transition-all duration-300"
@@ -379,7 +383,7 @@ const TeamPage = () => {
                 View Open Positions
               </motion.a>
               <motion.a
-                href="/#contact"
+                href="/"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-block bg-[#262626] border-2 border-[#16a34a] text-white font-semibold py-4 px-8 rounded-lg text-lg hover:bg-[#16a34a] hover:text-[#1a1a1a] transition-all duration-300"

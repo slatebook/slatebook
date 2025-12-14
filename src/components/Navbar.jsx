@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import Logo from '../assets/logos/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,8 +39,16 @@ const Navbar = () => {
             transition={{ duration: 0.5 }}
             className="shrink-0"
           >
-            <Link to="/" className="text-2xl md:text-3xl font-semibold text-white hover:text-[#16a34a] transition-colors">
-              SlateBook
+            <Link to="/" className="text-2xl md:text-3xl font-semibold text-white">
+            <div className='flex justify-center items-center'>
+               <img src={Logo} alt="Logo" className="w-10 h-8 md:h-10" />
+               <div className='ml-1 flex flex-col leading-tight'>
+                <span className="text-base font-bold">SlateBook</span>
+                <span className="text-[8px]">Empower Your Vision.</span>
+
+               </div>
+            </div>
+
             </Link>
           </motion.div>
 

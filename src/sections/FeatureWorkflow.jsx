@@ -74,7 +74,7 @@ const FeatureWorkflow = () => {
                 <div className="space-y-2">
                   {workflow.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center gap-2">
-                      <svg className="w-5 h-5 text-[#16a34a] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 text-[#16a34a] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <span className="text-sm md:text-base text-[#e5e5e5]">{feature}</span>
@@ -90,7 +90,7 @@ const FeatureWorkflow = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
                       </svg>
                     </div>
-                    <p className="text-xs md:text-sm text-[#e5e5e5]">Demo Preview</p>
+                    <p className="text-xs md:text-sm text-[#e5e5e5]">Coming Soon</p>
                   </div>
                 </div>
               </div>

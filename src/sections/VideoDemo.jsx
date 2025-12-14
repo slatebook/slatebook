@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import DemoVideoSlateBook from '../assets/video/slate-book-video.mp4'
 
 const VideoDemo = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -40,55 +41,11 @@ const VideoDemo = () => {
             <div className="relative aspect-video bg-linear-to-br from-[#1a1a1a] via-[#262626] to-[#1a1a1a]">
               {/* Placeholder Content - Replace with actual video */}
               <div className="absolute inset-0 flex flex-col items-center justify-center p-6 md:p-12">
-                {/* Play Button */}
-                <motion.button
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  onClick={() => setIsPlaying(!isPlaying)}
-                  className="group relative w-20 h-20 md:w-28 md:h-28 mb-6"
-                >
-                  {/* Pulsing Ring Effect */}
-                  <div className="absolute inset-0 rounded-full bg-[#16a34a]/20 animate-ping" />
-                  
-                  {/* Play Button Circle */}
-                  <div className="relative w-full h-full rounded-full bg-linear-to-br from-[#16a34a] to-[#22c55e] flex items-center justify-center shadow-lg group-hover:shadow-2xl group-hover:shadow-[#16a34a]/50 transition-all duration-300">
-                    <svg 
-                      className="w-8 h-8 md:w-12 md:h-12 text-white ml-1" 
-                      fill="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                </motion.button>
 
-                {/* Demo Text */}
-                <div className="text-center space-y-2 md:space-y-3">
-                  <h3 className="text-xl md:text-3xl font-semibold text-white">
-                    Watch the Demo
-                  </h3>
-                  <p className="text-sm md:text-lg text-[#e5e5e5]">
-                    See how easy it is to write, sync, and learn with AI
-                  </p>
-                  <div className="flex items-center justify-center gap-2 text-xs md:text-sm text-[#16a34a] font-semibold">
-                    <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span>2:30 minutes</span>
-                  </div>
-                </div>
 
-                {/* Video Embed Placeholder - Replace with actual YouTube/Vimeo embed */}
-                {/* Example: 
-                <iframe
-                  className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-                  title="SlateBook Demo"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-                */}
+                <video width="100%" height="auto" controls autoPlay={true} muted={true}>
+                  <source src={DemoVideoSlateBook} type="video/mp4" />
+                </video>
               </div>
 
               {/* Corner Badges */}

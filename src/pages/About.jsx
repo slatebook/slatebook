@@ -303,7 +303,7 @@ const About = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#0f0f0f]">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-[#0f0f0f]">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -318,14 +318,6 @@ const About = () => {
             <p className="text-lg md:text-xl text-[#e5e5e5] mb-8 leading-relaxed">
               Be part of the education revolution. Get early access to SlateBook and help us transform learning for millions of students.
             </p>
-            <motion.a
-              href="/#launching"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-block bg-linear-to-r from-[#16a34a] to-[#22c55e] text-[#1a1a1a] font-semibold py-4 px-8 rounded-lg text-lg shadow-lg hover:shadow-xl hover:shadow-[#16a34a]/50 transition-all duration-300"
-            >
-              Get Early Access
-            </motion.a>
           </motion.div>
         </div>
       </section>
