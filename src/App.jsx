@@ -5,9 +5,12 @@ import About from './pages/About';
 import TeamPage from './pages/TeamPage';
 import Careers from './pages/Careers';
 
+import WelcomeModal from './components/WelcomeModal';
+
 const App = () => {
   return (
     <Router>
+      <WelcomeModal />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
