@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import PranjalImage from "../assets/images/Pranjal.jpg"
+import PranjalImage from "../assets/images/Pranjal.jpeg"
 import AnuragImage from "../assets/images/Anurag.jpg"
 import MohitImage from "../assets/images/Mohit.jpg"
 import SarvajeeetImage from "../assets/images/Sarvajeet.jpg"
