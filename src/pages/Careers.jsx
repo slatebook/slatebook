@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import PranjalImage from "../assets/images/Pranjal.jpg"
+import PranjalImage from "../assets/images/Pranjal.jpeg"
 import AnuragImage from "../assets/images/Anurag.jpg"
 
 const Careers = () => {
