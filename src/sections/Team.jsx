@@ -17,7 +17,7 @@ const Team = () => {
     },
     {
       name: 'Anurag',
-      role: 'Co-Founder & COO',
+      role: 'Research and Development',
       bio: 'Psychology and data science professional, founder of SketchMEE, NPTEL Star achiever, entrepreneur, and strategist with strong expertise in human behavior, analytics, and business growth.',
       email: '23f2000838@ds.study.iitm.ac.in',
       linkedin: 'https://www.linkedin.com/in/siranurag/',
