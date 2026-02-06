@@ -201,40 +201,40 @@ const Careers = () => {
     }
   ];
 
-  const filteredJobs = selectedDepartment === 'All' 
-    ? jobs 
+  const filteredJobs = selectedDepartment === 'All'
+    ? jobs
     : jobs.filter(job => job.department === selectedDepartment);
 
   return (
-    <div className="min-h-screen bg-[#1a1a1a]">
+    <div className="min-h-screen bg-[#fafafa]">
       <Navbar />
 
       {/* Hero Section */}
       <section className="min-h-[70vh] pt-24 md:pt-32 pb-12 md:pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden flex items-center">
-        <div className="absolute inset-0 bg-linear-to-br from-[#16a34a]/10 via-transparent to-transparent pointer-events-none" />
-        
+        <div className="absolute inset-0 bg-linear-to-br from-gray-100 via-transparent to-transparent pointer-events-none" />
+
         <div className="max-w-6xl mx-auto relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6 leading-tight">
               Build the Future of{' '}
-              <span className="bg-linear-to-r from-[#16a34a] to-[#22c55e] bg-clip-text text-transparent">
+              <span className="text-black border-b-4 border-black">
                 Education
               </span>
               <br />
               with Us
             </h1>
-            <p className="text-base sm:text-lg text-[#e5e5e5] mb-8 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-700 mb-8 leading-relaxed max-w-3xl mx-auto font-serif">
               Join a passionate team of innovators, dreamers, and problem-solvers on a mission to make quality education accessible to millions of students worldwide.
             </p>
             <motion.a
               href="#openings"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-block bg-linear-to-r from-[#16a34a] to-[#22c55e] text-[#1a1a1a] font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300"
+              className="inline-block bg-black text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 hover:bg-gray-800 hover:shadow-lg"
             >
               View Open Positions
             </motion.a>
@@ -243,7 +243,7 @@ const Careers = () => {
       </section>
 
       {/* Why Join Us */}
-      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-[#1a1a1a] to-[#0f0f0f]">
+      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-white border-y border-gray-200">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -252,13 +252,13 @@ const Careers = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
               Why Join{' '}
-              <span className="bg-linear-to-r from-[#16a34a] to-[#22c55e] bg-clip-text text-transparent">
+              <span className="text-black border-b-4 border-black">
                 SlateBook?
               </span>
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-[#e5e5e5] max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto font-serif">
               More than just a job—it's an opportunity to make real impact
             </p>
           </motion.div>
@@ -287,13 +287,13 @@ const Careers = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-[#262626] border border-[#333333] rounded-xl p-6 md:p-8 hover:border-[#16a34a] transition-all duration-300 text-center"
+                className="bg-gray-50 border border-gray-200 rounded-xl p-6 md:p-8 hover:border-black transition-all duration-300 text-center"
               >
                 <div className="text-5xl mb-4">{item.icon}</div>
-                <h3 className="text-xl md:text-2xl font-semibold text-white mb-3">
+                <h3 className="text-xl md:text-2xl font-bold text-black mb-3">
                   {item.title}
                 </h3>
-                <p className="text-sm md:text-base text-[#e5e5e5] leading-relaxed">
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed font-serif">
                   {item.description}
                 </p>
               </motion.div>
@@ -303,7 +303,7 @@ const Careers = () => {
       </section>
 
       {/* Benefits & Perks */}
-      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#0f0f0f]">
+      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#fafafa]">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -312,13 +312,13 @@ const Careers = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
               Benefits &{' '}
-              <span className="bg-linear-to-r from-[#16a34a] to-[#22c55e] bg-clip-text text-transparent">
+              <span className="text-black border-b-4 border-black">
                 Perks
               </span>
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-[#e5e5e5] max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto font-serif">
               We take care of our team so they can do their best work
             </p>
           </motion.div>
@@ -331,13 +331,13 @@ const Careers = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="bg-[#262626] border border-[#333333] rounded-xl p-6 hover:border-[#16a34a] transition-all duration-300 hover:shadow-xl hover:shadow-[#16a34a]/10"
+                className="bg-white border border-gray-200 rounded-xl p-6 hover:border-black transition-all duration-300 hover:shadow-lg"
               >
                 <div className="text-4xl mb-3">{benefit.icon}</div>
-                <h3 className="text-lg md:text-xl font-semibold text-white mb-2">
+                <h3 className="text-lg md:text-xl font-bold text-black mb-2">
                   {benefit.title}
                 </h3>
-                <p className="text-sm text-[#e5e5e5]">
+                <p className="text-sm text-gray-600 font-serif">
                   {benefit.description}
                 </p>
               </motion.div>
@@ -349,16 +349,16 @@ const Careers = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-[#262626] border border-[#333333] rounded-xl p-6 md:p-8"
+            className="bg-white border border-gray-200 rounded-xl p-6 md:p-8 hover:shadow-md"
           >
-            <h3 className="text-2xl md:text-3xl font-semibold text-white mb-6">Plus More...</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-black mb-6">Plus More...</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {perks.map((perk, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#16a34a] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-black mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-sm md:text-base text-[#e5e5e5]">{perk}</span>
+                  <span className="text-sm md:text-base text-gray-700 font-serif">{perk}</span>
                 </div>
               ))}
             </div>
@@ -367,7 +367,7 @@ const Careers = () => {
       </section>
 
       {/* Open Positions */}
-      <section id="openings" className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-[#0f0f0f] to-[#1a1a1a]">
+      <section id="openings" className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-white border-y border-gray-200">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -376,13 +376,13 @@ const Careers = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
               Open{' '}
-              <span className="bg-linear-to-r from-[#16a34a] to-[#22c55e] bg-clip-text text-transparent">
+              <span className="text-black border-b-4 border-black">
                 Positions
               </span>
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-[#e5e5e5] max-w-3xl mx-auto mb-8">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-8 font-serif">
               Find your perfect role and start making an impact
             </p>
 
@@ -392,11 +392,10 @@ const Careers = () => {
                 <button
                   key={dept}
                   onClick={() => setSelectedDepartment(dept)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                    selectedDepartment === dept
-                      ? 'bg-linear-to-r from-[#16a34a] to-[#22c55e] text-[#1a1a1a]'
-                      : 'bg-[#262626] text-[#e5e5e5] hover:bg-[#333333]'
-                  }`}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${selectedDepartment === dept
+                      ? 'bg-black text-white'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
                 >
                   {dept}
                 </button>
@@ -405,57 +404,57 @@ const Careers = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 gap-6">
-            {filteredJobs.length > 0 ? <><h1 className='text-center font-bold text-base  sm:text-2xl'>No positions found</h1></>:
-            <>{filteredJobs.map((job, index) => (
+            {filteredJobs.length > 0 ? <></> : <><h1 className='text-center font-bold text-base  sm:text-2xl text-gray-700'>No positions found</h1></>}
+            {filteredJobs.length > 0 && filteredJobs.map((job, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="bg-[#262626] border border-[#333333] rounded-xl p-6 md:p-8 hover:border-[#16a34a] transition-all duration-300 hover:shadow-xl hover:shadow-[#16a34a]/10"
+                className="bg-white border border-gray-200 rounded-xl p-6 md:p-8 hover:border-black transition-all duration-300 hover:shadow-lg"
               >
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-4">
                   <div className="flex-1">
-                    <h3 className="text-2xl md:text-3xl font-semibold text-white mb-3">
+                    <h3 className="text-2xl md:text-3xl font-bold text-black mb-3">
                       {job.title}
                     </h3>
                     <div className="flex flex-wrap gap-3 mb-4">
-                      <span className="px-3 py-1 bg-[#16a34a]/20 border border-[#16a34a] rounded-full text-xs md:text-sm text-[#16a34a] font-semibold">
+                      <span className="px-3 py-1 bg-gray-100 border border-gray-200 rounded-full text-xs md:text-sm text-black font-semibold">
                         {job.department}
                       </span>
-                      <span className="px-3 py-1 bg-[#1a1a1a] border border-[#333333] rounded-full text-xs md:text-sm text-[#e5e5e5]">
+                      <span className="px-3 py-1 bg-white border border-gray-200 rounded-full text-xs md:text-sm text-gray-600">
                         📍 {job.location}
                       </span>
-                      <span className="px-3 py-1 bg-[#1a1a1a] border border-[#333333] rounded-full text-xs md:text-sm text-[#e5e5e5]">
+                      <span className="px-3 py-1 bg-white border border-gray-200 rounded-full text-xs md:text-sm text-gray-600">
                         ⏰ {job.type}
                       </span>
-                      <span className="px-3 py-1 bg-[#1a1a1a] border border-[#333333] rounded-full text-xs md:text-sm text-[#e5e5e5]">
+                      <span className="px-3 py-1 bg-white border border-gray-200 rounded-full text-xs md:text-sm text-gray-600">
                         💼 {job.experience}
                       </span>
                     </div>
-                    <p className="text-sm md:text-base text-[#e5e5e5] mb-4">
+                    <p className="text-sm md:text-base text-gray-700 mb-4 font-serif">
                       {job.description}
                     </p>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                       <div>
-                        <h4 className="text-sm font-semibold text-[#16a34a] mb-2">Requirements:</h4>
+                        <h4 className="text-sm font-semibold text-black mb-2">Requirements:</h4>
                         <ul className="space-y-1">
                           {job.requirements.map((req, idx) => (
-                            <li key={idx} className="text-xs md:text-sm text-[#e5e5e5] flex items-start gap-2">
-                              <span className="text-[#16a34a]">•</span>
+                            <li key={idx} className="text-xs md:text-sm text-gray-600 flex items-start gap-2">
+                              <span className="text-black">•</span>
                               {req}
                             </li>
                           ))}
                         </ul>
                       </div>
                       <div>
-                        <h4 className="text-sm font-semibold text-[#16a34a] mb-2">Responsibilities:</h4>
+                        <h4 className="text-sm font-semibold text-black mb-2">Responsibilities:</h4>
                         <ul className="space-y-1">
                           {job.responsibilities.slice(0, 4).map((resp, idx) => (
-                            <li key={idx} className="text-xs md:text-sm text-[#e5e5e5] flex items-start gap-2">
-                              <span className="text-[#16a34a]">•</span>
+                            <li key={idx} className="text-xs md:text-sm text-gray-600 flex items-start gap-2">
+                              <span className="text-black">•</span>
                               {resp}
                             </li>
                           ))}
@@ -463,31 +462,31 @@ const Careers = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <motion.a
                     href="/"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="shrink-0 bg-linear-to-r from-[#16a34a] to-[#22c55e] text-[#1a1a1a] font-semibold py-3 px-6 rounded-lg text-center hover:shadow-lg transition-all duration-300"
+                    className="shrink-0 bg-black text-white font-semibold py-3 px-6 rounded-lg text-center hover:bg-gray-800 transition-all duration-300 shadow-md"
                   >
                     Apply Now
                   </motion.a>
                 </div>
               </motion.div>
-            ))}</>}
+            ))}
           </div>
 
           {filteredJobs.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-xl text-[#e5e5e5]">No positions available in this department right now.</p>
-              <p className="text-base text-[#808080] mt-2">Check back soon or apply for other roles!</p>
+              <p className="text-xl text-gray-700 font-serif">No positions available in this department right now.</p>
+              <p className="text-base text-gray-500 mt-2 font-serif">Check back soon or apply for other roles!</p>
             </div>
           )}
         </div>
       </section>
 
       {/* Hiring Process */}
-      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#1a1a1a]">
+      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#fafafa]">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -496,13 +495,13 @@ const Careers = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
               Our Hiring{' '}
-              <span className="bg-linear-to-r from-[#16a34a] to-[#22c55e] bg-clip-text text-transparent">
+              <span className="text-black border-b-4 border-black">
                 Process
               </span>
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-[#e5e5e5] max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto font-serif">
               Simple, transparent, and respectful of your time
             </p>
           </motion.div>
@@ -515,21 +514,21 @@ const Careers = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="flex items-start gap-4 md:gap-6 bg-[#262626] border border-[#333333] rounded-xl p-6 md:p-8 hover:border-[#16a34a] transition-all duration-300"
+                className="flex items-start gap-4 md:gap-6 bg-white border border-gray-200 rounded-xl p-6 md:p-8 hover:border-black transition-all duration-300"
               >
-                <div className="shrink-0 w-16 h-16 bg-linear-to-br from-[#16a34a] to-[#22c55e] rounded-full flex items-center justify-center shadow-lg">
+                <div className="shrink-0 w-16 h-16 bg-black rounded-full flex items-center justify-center shadow-md">
                   <span className="text-xl font-black text-white">{step.step}</span>
                 </div>
                 <div className="flex-1">
                   <div className="flex items-start justify-between gap-4 mb-2">
-                    <h3 className="text-xl md:text-2xl font-semibold text-white">
+                    <h3 className="text-xl md:text-2xl font-bold text-black">
                       {step.title}
                     </h3>
-                    <span className="text-sm md:text-base text-[#16a34a] font-semibold whitespace-nowrap">
+                    <span className="text-sm md:text-base text-gray-600 font-semibold whitespace-nowrap border border-gray-200 px-2 py-1 rounded">
                       {step.duration}
                     </span>
                   </div>
-                  <p className="text-sm md:text-base text-[#e5e5e5]">
+                  <p className="text-sm md:text-base text-gray-700 font-serif">
                     {step.description}
                   </p>
                 </div>
@@ -540,7 +539,7 @@ const Careers = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-[#1a1a1a] to-[#0f0f0f]">
+      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-white border-y border-gray-200">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -549,13 +548,13 @@ const Careers = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
               What Our Team{' '}
-              <span className="bg-linear-to-r from-[#16a34a] to-[#22c55e] bg-clip-text text-transparent">
+              <span className="text-black border-b-4 border-black">
                 Says
               </span>
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-[#e5e5e5] max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto font-serif">
               Hear from the people who work here every day
             </p>
           </motion.div>
@@ -568,18 +567,18 @@ const Careers = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-[#262626] border border-[#333333] rounded-xl p-6 md:p-8 hover:border-[#16a34a] transition-all duration-300"
+                className="bg-gray-50 border border-gray-200 rounded-xl p-6 md:p-8 hover:border-black transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-16 h-16 bg-linear-to-br from-[#262626] to-[#1a1a1a] rounded-full flex items-center justify-center text-3xl border-2 border-[#333333]">
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl border border-gray-300">
                     <img src={testimonial.image} alt={testimonial.name} className="w-full h-full object-cover rounded-full" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-white">{testimonial.name}</h4>
-                    <p className="text-sm text-[#16a34a]">{testimonial.role}</p>
+                    <h4 className="text-lg font-bold text-black">{testimonial.name}</h4>
+                    <p className="text-sm text-gray-600">{testimonial.role}</p>
                   </div>
                 </div>
-                <p className="text-sm md:text-base text-[#e5e5e5] italic leading-relaxed">
+                <p className="text-sm md:text-base text-gray-700 italic leading-relaxed font-serif">
                   "{testimonial.quote}"
                 </p>
               </motion.div>
@@ -589,26 +588,26 @@ const Careers = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#0f0f0f]">
+      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#fafafa]">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-linear-to-br from-[#262626] to-[#1a1a1a] border-2 border-[#16a34a] rounded-2xl p-8 md:p-12"
+            className="bg-white border-2 border-black rounded-2xl p-8 md:p-12 shadow-xl"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-6">
               Don't See Your Role?
             </h2>
-            <p className="text-lg md:text-xl text-[#e5e5e5] mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed font-serif">
               We're always looking for talented people. Send us your resume and let's talk about how you can contribute to SlateBook's mission.
             </p>
             <motion.a
               href="/"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-block bg-linear-to-r from-[#16a34a] to-[#22c55e] text-[#1a1a1a] font-semibold py-4 px-8 rounded-lg text-lg shadow-lg hover:shadow-xl hover:shadow-[#16a34a]/50 transition-all duration-300"
+              className="inline-block bg-black text-white font-semibold py-4 px-8 rounded-lg text-lg shadow-lg hover:shadow-xl transition-all duration-300"
             >
               Contact Us
             </motion.a>

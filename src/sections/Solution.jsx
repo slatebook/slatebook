@@ -52,7 +52,7 @@ const Solution = () => {
   ];
 
   return (
-    <section id="solution" className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-br from-[#1a1a1a] via-[#1a1a1a] to-[#16a34a]/5">
+    <section id="solution" className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#fafafa]">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -61,13 +61,13 @@ const Solution = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-4 md:mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4 md:mb-6">
             Introducing{' '}
-            <span className="bg-linear-to-r from-[#16a34a] to-[#22c55e] bg-clip-text text-transparent">
+            <span className="text-black border-b-4 border-black">
               SlateBook
             </span>
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-[#e5e5e5] max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto font-serif">
             World's most affordable AI-powered infinite reusable notebook
           </p>
         </motion.div>
@@ -76,13 +76,13 @@ const Solution = () => {
           {features.map((feature, index) => (
             <Card key={index} delay={index * 0.1}>
               <div className="flex flex-col items-center text-center space-y-4">
-                <div className="text-[#16a34a]">
+                <div className="text-black">
                   {feature.icon}
                 </div>
-                <h3 className="text-lg md:text-xl font-semibold text-white">
+                <h3 className="text-lg md:text-xl font-bold text-black">
                   {feature.title}
                 </h3>
-                <p className="text-sm md:text-base text-[#e5e5e5] leading-relaxed">
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed font-serif">
                   {feature.description}
                 </p>
               </div>

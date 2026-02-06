@@ -8,7 +8,7 @@ const Card = ({ children, className = '', delay = 0 }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5, delay }}
-      className={`bg-[#262626] rounded-xl p-6 hover:bg-[#2d2d2d] transition-all duration-300 hover:shadow-xl hover:shadow-[#16a34a]/10 border border-[#333333] ${className}`}
+      className={`bg-white rounded-xl p-6 hover:bg-gray-50 transition-all duration-300 shadow-md hover:shadow-xl border border-gray-200 hover:border-black ${className}`}
     >
       {children}
     </motion.div>

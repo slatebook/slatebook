@@ -9,12 +9,16 @@ import Solution from '../sections/Solution';
 import FeatureWorkflow from '../sections/FeatureWorkflow';
 import Team from '../sections/Team';
 import Contact from '../sections/Contact';
+import Products from '../sections/Products';
+import Roadmap from '../sections/Roadmap';
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-[#1a1a1a]">
+    <div className="min-h-screen bg-[#fafafa]">
       <Navbar />
       <Hero />
+      <Products />
+      <Roadmap />
       <LaunchingSoon />
       <VideoDemo />
       <Problems />

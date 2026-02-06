@@ -7,6 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
+        'paper-white': '#ffffff',
+        'ink-black': '#0e0e0e',
+        'paper-gray': '#f5f5f5',
         'grey-10': '#1a1a1a',
         'grey-15': '#262626',
         'grey-90': '#e5e5e5',

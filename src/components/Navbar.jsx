@@ -23,12 +23,11 @@ const Navbar = () => {
   ];
 
   return (
-    <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-[#1a1a1a]/80 backdrop-blur-lg shadow-lg' 
-          : 'bg-transparent'
-      }`}
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+        ? 'bg-white/90 backdrop-blur-lg shadow-sm border-b border-black/5'
+        : 'bg-transparent'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
@@ -39,15 +38,15 @@ const Navbar = () => {
             transition={{ duration: 0.5 }}
             className="shrink-0"
           >
-            <Link to="/" className="text-2xl md:text-3xl font-semibold text-white">
-            <div className='flex justify-center items-center'>
-               <img src={Logo} alt="Logo" className="w-10 h-8 md:h-10" />
-               <div className='ml-1 flex flex-col leading-tight'>
-                <span className="text-base font-bold">SlateBook</span>
-                <span className="text-[8px]">Empower Your Vision.</span>
+            <Link to="/" className="text-2xl md:text-3xl font-semibold text-black">
+              <div className='flex justify-center items-center'>
+                <img src={Logo} alt="Logo" className="w-10 h-8 md:h-10" />
+                <div className='ml-1 flex flex-col leading-tight'>
+                  <span className="text-base font-bold">SlateBook</span>
+                  <span className="text-[8px]">Empower Your Vision.</span>
 
-               </div>
-            </div>
+                </div>
+              </div>
 
             </Link>
           </motion.div>
@@ -61,16 +60,15 @@ const Navbar = () => {
           >
             {menuItems.map((item) => {
               const isActive = item.isPage && location.pathname === item.href;
-              
+
               return item.isPage ? (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`px-5 py-3 rounded-lg transition-all duration-300 font-medium ${
-                    isActive
-                      ? 'bg-[#16a34a] text-[#ffffff]'
-                      : 'text-[#ffffff] bg-[#262626] hover:bg-[#16a34a] hover:text-[#ffffff]'
-                  }`}
+                  className={`px-5 py-3 rounded-lg transition-all duration-300 font-medium ${isActive
+                    ? 'bg-black text-white shadow-md'
+                    : 'text-[#1a1a1a] hover:bg-black hover:text-white'
+                    }`}
                 >
                   {item.name}
                 </Link>
@@ -78,7 +76,7 @@ const Navbar = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="px-4 py-2 rounded-lg text-[#ffffff] bg-[#262626] hover:bg-[#16a34a] hover:text-[#ffffff] transition-all duration-300 font-medium"
+                  className="px-4 py-2 rounded-lg text-[#1a1a1a] hover:bg-black hover:text-white transition-all duration-300 font-medium"
                 >
                   {item.name}
                 </a>
@@ -125,17 +123,16 @@ const Navbar = () => {
               <div className="py-4 space-y-2">
                 {menuItems.map((item) => {
                   const isActive = item.isPage && location.pathname === item.href;
-                  
+
                   return item.isPage ? (
                     <Link
                       key={item.name}
                       to={item.href}
                       onClick={() => setIsOpen(false)}
-                      className={`block px-4 py-3 rounded-lg transition-all duration-300 font-medium text-center ${
-                        isActive
-                          ? 'bg-[#16a34a] text-[#ffffff]'
-                          : 'text-[#ffffff] bg-[#262626] hover:bg-[#16a34a]'
-                      }`}
+                      className={`block px-4 py-3 rounded-lg transition-all duration-300 font-medium text-center ${isActive
+                        ? 'bg-black text-white'
+                        : 'text-[#1a1a1a] bg-[#f5f5f5] hover:bg-black hover:text-white'
+                        }`}
                     >
                       {item.name}
                     </Link>
@@ -144,7 +141,7 @@ const Navbar = () => {
                       key={item.name}
                       href={item.href}
                       onClick={() => setIsOpen(false)}
-                      className="block px-4 py-3 rounded-lg text-[#ffffff] bg-[#262626] hover:bg-[#16a34a] transition-all duration-300 font-medium text-center"
+                      className="block px-4 py-3 rounded-lg text-[#1a1a1a] bg-[#f5f5f5] hover:bg-black hover:text-white transition-all duration-300 font-medium text-center"
                     >
                       {item.name}
                     </a>

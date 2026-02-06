@@ -36,9 +36,9 @@ const LaunchingSoon = () => {
   }, []);
 
   return (
-    <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-[#1a1a1a] via-[#0f0f0f] to-[#1a1a1a] relative overflow-hidden">
+    <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[radial-linear(circle_at_center,#16a34a05_0%,transparent_70%)] pointer-events-none" />
+      <div className="absolute inset-0 opacity-10 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* 🚀 LAUNCHING SOON BANNER - Eye-Catching */}
@@ -50,7 +50,7 @@ const LaunchingSoon = () => {
         >
           <div className="relative">
             {/* Main Launch Card */}
-            <div className="relative bg-linear-to-r from-[#16a34a] via-[#22c55e] to-[#16a34a] p-0.5 rounded-2xl overflow-hidden">
+            <div className="relative bg-black p-0.5 rounded-2xl overflow-hidden shadow-xl">
               {/* Animated Border Glow */}
               <motion.div
                 animate={{
@@ -65,9 +65,9 @@ const LaunchingSoon = () => {
                 style={{ backgroundSize: "200% 100%" }}
               />
 
-              <div className="relative bg-[#1a1a1a] rounded-2xl px-4 py-6 md:px-8 md:py-8 lg:px-12 lg:py-10">
+              <div className="relative bg-[#fafafa] rounded-2xl px-4 py-6 md:px-8 md:py-8 lg:px-12 lg:py-10">
                 <div className="flex flex-col items-center justify-center gap-6 lg:gap-8">
-                
+
                   <div className="text-center flex-1 flex flex-col items-center justify-center">
                     {/* Pulsing Badge */}
                     <motion.div
@@ -80,7 +80,7 @@ const LaunchingSoon = () => {
                         repeat: Infinity,
                         ease: "easeInOut",
                       }}
-                      className="inline-flex items-center gap-2 bg-[#262626] border-2 border-[#16a34a] px-4 py-2 rounded-full mb-4"
+                      className="inline-flex items-center gap-2 bg-white border-2 border-black px-4 py-2 rounded-full mb-4 shadow-sm"
                     >
                       <motion.span
                         animate={{
@@ -91,16 +91,16 @@ const LaunchingSoon = () => {
                           repeat: Infinity,
                           ease: "easeInOut",
                         }}
-                        className="w-2 h-2 bg-[#16a34a] rounded-full"
+                        className="w-2 h-2 bg-black rounded-full"
                       />
-                      <span className="text-[#16a34a] font-semibold text-xs md:text-sm uppercase tracking-wider">
+                      <span className="text-black font-bold text-xs md:text-sm uppercase tracking-wider">
                         Launching Soon
                       </span>
                     </motion.div>
 
-                    <p className="text-sm sm:text-base md:text-lg text-center text-[#e5e5e5] max-w-2xl mx-auto lg:mx-0">
+                    <p className="text-sm sm:text-base md:text-lg text-center text-gray-700 max-w-2xl mx-auto lg:mx-0 font-serif">
                       Be among the{" "}
-                      <span className="text-[#16a34a] font-semibold">
+                      <span className="text-black font-bold">
                         first 1,000 students
                       </span>{" "}
                       to experience the future of note-taking at an exclusive
@@ -142,16 +142,16 @@ const LaunchingSoon = () => {
                           whileInView={{ opacity: 1, y: 0 }}
                           viewport={{ once: true }}
                           transition={{ delay: 0.2 + index * 0.1 }}
-                          className="relative border"
+                          className="relative"
                         >
-                          <div className="bg-linear-to-b from-[#262626] to-[#1a1a1a] border border-[#333333] rounded-lg p-4 sm:p-6 shadow-md">
-                            <div className="text-3xl sm:text-4xl font-black text-[#16a34a] text-center mb-3">
+                          <div className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 shadow-md hover:border-black transition-all duration-300 h-full">
+                            <div className="text-3xl sm:text-4xl font-black text-black text-center mb-3">
                               {item.icon}
                             </div>
-                            <h3 className="text-base sm:text-lg font-bold text-[#e5e5e5] text-center mb-1">
+                            <h3 className="text-base sm:text-lg font-bold text-black text-center mb-1">
                               {item.title}
                             </h3>
-                            <p className="text-xs sm:text-sm text-[#b3b3b3] text-center">
+                            <p className="text-xs sm:text-sm text-gray-600 text-center font-serif">
                               {item.description}
                             </p>
                           </div>
@@ -165,7 +165,7 @@ const LaunchingSoon = () => {
                               repeat: Infinity,
                               delay: index * 0.2,
                             }}
-                            className="absolute inset-0 bg-[#16a34a]/20 rounded-lg blur-lg -z-10"
+                            className="absolute inset-0 bg-black/5 rounded-lg blur-lg -z-10"
                           />
                         </motion.div>
                       ))}
@@ -179,13 +179,13 @@ const LaunchingSoon = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.6 }}
-                  className="mt-6 pt-6 border-t border-[#333333] flex flex-wrap justify-center items-center gap-4 text-center"
+                  className="mt-6 pt-6 border-t border-gray-200 flex flex-wrap justify-center items-center gap-4 text-center"
                 >
                   <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm">
                     <div className="flex items-center gap-2">
                       <span className="text-2xl">⚡</span>
-                      <span className="text-[#e5e5e5]">
-                        <span className="text-[#16a34a] font-semibold">
+                      <span className="text-gray-700 font-serif">
+                        <span className="text-black font-bold">
                           2,847
                         </span>{" "}
                         Waitlist
@@ -193,8 +193,8 @@ const LaunchingSoon = () => {
                     </div>
                     <div className="flex items-center gap-2">
                       <span className="text-2xl">🎓</span>
-                      <span className="text-[#e5e5e5]">
-                        <span className="text-[#16a34a] font-semibold">
+                      <span className="text-gray-700 font-serif">
+                        <span className="text-black font-bold">
                           50%
                         </span>{" "}
                         Launch Discount
@@ -202,9 +202,9 @@ const LaunchingSoon = () => {
                     </div>
                     <div className="flex items-center gap-2">
                       <span className="text-2xl">✨</span>
-                      <span className="text-[#e5e5e5]">
+                      <span className="text-gray-700 font-serif">
                         Limited to{" "}
-                        <span className="text-[#16a34a] font-semibold">
+                        <span className="text-black font-bold">
                           1,000
                         </span>{" "}
                         Units
@@ -226,7 +226,7 @@ const LaunchingSoon = () => {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute -top-10 -right-10 w-40 h-40 bg-[#16a34a]/20 rounded-full blur-3xl pointer-events-none"
+              className="absolute -top-10 -right-10 w-40 h-40 bg-gray-200 rounded-full blur-3xl pointer-events-none"
             />
             <motion.div
               animate={{
@@ -238,7 +238,7 @@ const LaunchingSoon = () => {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute -bottom-10 -left-10 w-40 h-40 bg-[#22c55e]/20 rounded-full blur-3xl pointer-events-none"
+              className="absolute -bottom-10 -left-10 w-40 h-40 bg-gray-200 rounded-full blur-3xl pointer-events-none"
             />
           </div>
         </motion.div>

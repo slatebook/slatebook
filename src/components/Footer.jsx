@@ -221,10 +221,10 @@ const Footer = () => {
   // ];
 
   return (
-    <footer className="relative bg-linear-to-b from-[#0f0f0f] to-[#000000] pt-12 md:pt-16 pb-8 overflow-hidden">
+    <footer className="relative bg-[#f5f5f5] pt-12 md:pt-16 pb-8 overflow-hidden border-t-2 border-black">
       {/* Background linear Effects */}
-      <div className="absolute inset-0 bg-[radial-linear(circle_at_top_right,#16a34a10_0%,transparent_50%)] pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-linear(circle_at_bottom_left,#22c55e08_0%,transparent_50%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-linear(circle_at_top_right,#00000005_0%,transparent_50%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-linear(circle_at_bottom_left,#00000005_0%,transparent_50%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Top Section - Logo, Slogan & Description */}
@@ -233,14 +233,14 @@ const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-8 md:mb-12 pb-8 md:pb-12 border-b border-[#262626]"
+          className="text-center mb-8 md:mb-12 pb-8 md:pb-12 border-b border-black/10"
         >
           {/* Logo with linear */}
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center shadow-lg shadow-[#16a34a]/30">
-             <img src={Logo} alt="SlateBook-Logo" className="w-6 h-6 md:w-8 md:h-8" />
+            <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
+              <img src={Logo} alt="SlateBook-Logo" className="w-6 h-6 md:w-8 md:h-8" />
             </div>
-            <h2 className="text-2xl md:text-4xl font-black text-white">
+            <h2 className="text-2xl md:text-4xl font-black text-black">
               SlateBook
             </h2>
           </div>
@@ -251,7 +251,7 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-2xl font-semibold mb-4 bg-linear-to-r from-[#16a34a] via-[#22c55e] to-[#10b981] bg-clip-text text-transparent"
+            className="text-lg md:text-2xl font-bold mb-4 text-black"
           >
             "Write Once, Reuse Forever. Learn Smarter, Not Harder."
           </motion.p>
@@ -262,7 +262,7 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-sm md:text-base text-[#e5e5e5] max-w-3xl mx-auto leading-relaxed"
+            className="text-sm md:text-base text-gray-700 max-w-3xl mx-auto leading-relaxed font-serif"
           >
             SlateBook is revolutionizing education with the world's most
             affordable AI-powered reusable digital notebook. Designed for
@@ -270,24 +270,6 @@ const Footer = () => {
             instantly, and let AI be your personal tutor. Join thousands of
             students already experiencing the future of note-taking.
           </motion.p>
-
-          {/* Social Media Icons */}
-          {/* <div className="flex items-center gap-4 justify-center mt-6">
-            {socialLinks.map((social) => (
-              <motion.a
-                key={social.name}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.15, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-10 h-10 bg-[#262626] rounded-full flex items-center justify-center text-[#e5e5e5] hover:bg-linear-to-br hover:from-[#16a34a] hover:to-[#22c55e] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-[#16a34a]/30"
-                aria-label={social.name}
-              >
-                {social.icon}
-              </motion.a>
-            ))}
-          </div> */}
         </motion.div>
 
         {/* Middle Section - Links Grid */}
@@ -299,7 +281,7 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h3 className="text-white font-semibold text-base md:text-lg mb-4">
+            <h3 className="text-black font-bold text-base md:text-lg mb-4 uppercase tracking-wider">
               Product
             </h3>
             <ul className="space-y-2">
@@ -307,7 +289,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-[#e5e5e5] text-sm md:text-base hover:text-[#16a34a] transition-colors duration-300 hover:translate-x-1 inline-block"
+                    className="text-gray-700 text-sm md:text-base hover:text-black hover:underline transition-all duration-300 inline-block"
                   >
                     {link.name}
                   </a>
@@ -323,7 +305,7 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h3 className="text-white font-semibold text-base md:text-lg mb-4">
+            <h3 className="text-black font-bold text-base md:text-lg mb-4 uppercase tracking-wider">
               Company
             </h3>
             <ul className="space-y-2">
@@ -331,7 +313,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-[#e5e5e5] text-sm md:text-base hover:text-[#16a34a] transition-colors duration-300 hover:translate-x-1 inline-block"
+                    className="text-gray-700 text-sm md:text-base hover:text-black hover:underline transition-all duration-300 inline-block"
                   >
                     {link.name}
                   </a>
@@ -347,7 +329,7 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <h3 className="text-white font-semibold text-base md:text-lg mb-4">
+            <h3 className="text-black font-bold text-base md:text-lg mb-4 uppercase tracking-wider">
               Support
             </h3>
             <ul className="space-y-2">
@@ -355,7 +337,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <button
                     onClick={() => handleLinkClick(link)}
-                    className="text-[#e5e5e5] text-sm md:text-base hover:text-[#16a34a] transition-colors duration-300 hover:translate-x-1 inline-block cursor-pointer"
+                    className="text-gray-700 text-sm md:text-base hover:text-black hover:underline transition-all duration-300 inline-block cursor-pointer text-left"
                   >
                     {link.name}
                   </button>
@@ -371,13 +353,13 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <h3 className="text-white font-semibold text-base md:text-lg mb-4">
+            <h3 className="text-black font-bold text-base md:text-lg mb-4 uppercase tracking-wider">
               Contact Us
             </h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <svg
-                  className="w-5 h-5 text-[#16a34a] mt-0.5 shrink-0"
+                  className="w-5 h-5 text-black mt-0.5 shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -391,14 +373,14 @@ const Footer = () => {
                 </svg>
                 <a
                   href="mailto:contact@slatebook.com"
-                  className="text-[#e5e5e5] text-sm md:text-base hover:text-[#16a34a] transition-colors duration-300 hover:translate-x-1"
+                  className="text-gray-700 text-sm md:text-base hover:text-black hover:underline transition-all duration-300"
                 >
                   contact@slatebook.com
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <svg
-                  className="w-5 h-5 text-[#16a34a] mt-0.5 shrink-0"
+                  className="w-5 h-5 text-black mt-0.5 shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -410,13 +392,13 @@ const Footer = () => {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <span className="text-[#e5e5e5] text-sm md:text-base">
+                <span className="text-gray-700 text-sm md:text-base">
                   +91 9250850307
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <svg
-                  className="w-5 h-5 text-[#16a34a] mt-0.5 shrink-0"
+                  className="w-5 h-5 text-black mt-0.5 shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -434,7 +416,7 @@ const Footer = () => {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <span className="text-[#e5e5e5] text-sm md:text-base">
+                <span className="text-gray-700 text-sm md:text-base">
                   Delhi, India
                 </span>
               </li>
@@ -448,13 +430,13 @@ const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="pt-8 border-t border-[#262626]"
+          className="pt-8 border-t border-black/10"
         >
           <div className="flex justify-center">
             {/* Copyright */}
-            <p className="text-[#e5e5e5] text-sm md:text-base text-center">
+            <p className="text-gray-700 text-sm md:text-base text-center">
               © 2025{" "}
-              <span className="text-[#16a34a] font-semibold">SlateBook</span>.
+              <span className="text-black font-bold">SlateBook</span>.
               All rights reserved.
             </p>
           </div>
@@ -462,7 +444,7 @@ const Footer = () => {
       </div>
 
       {/* Decorative Bottom linear Line */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-transparent via-[#16a34a] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-black" />
 
       {/* Modal Component */}
       <Modal

@@ -21,23 +21,23 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitStatus('success');
       setFormData({ name: '', email: '', query: '' });
-      
+
       // Reset status after 3 seconds
       setTimeout(() => setSubmitStatus(null), 3000);
     }, 1500);
   };
 
   return (
-    <section id="contact" className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-[#1a1a1a] to-[#0f0f0f] relative overflow-hidden">
+    <section id="contact" className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#f5f5f5] relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-linear(circle_at_center,#16a34a08_0%,transparent_70%)] pointer-events-none" />
-      
+
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Section Header */}
         <motion.div
@@ -47,13 +47,13 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-8 md:mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-4 md:mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4 md:mb-6">
             Get in{' '}
-            <span className="bg-linear-to-r from-[#16a34a] to-[#22c55e] bg-clip-text text-transparent">
+            <span className="text-black border-b-4 border-black">
               Touch
             </span>
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-[#e5e5e5] max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-2xl mx-auto font-serif">
             Have any questions or need help? We'd love to hear from you. Drop us a message and we'll get back to you soon!
           </p>
         </motion.div>
@@ -68,8 +68,8 @@ const Contact = () => {
           <div className="relative">
             {/* linear Border Effect */}
             <div className="absolute  rounded-2xl blur-sm opacity-50" />
-            
-            <div className="relative bg-[#1a1a1a] border border-[#333333] rounded-2xl p-6 md:p-8 lg:p-10 shadow-2xl">
+
+            <div className="relative bg-white border border-gray-200 rounded-2xl p-6 md:p-8 lg:p-10 shadow-2xl">
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name Field */}
                 <motion.div
@@ -78,7 +78,7 @@ const Contact = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  <label htmlFor="name" className="block text-sm md:text-base font-semibold text-white mb-2">
+                  <label htmlFor="name" className="block text-sm md:text-base font-bold text-black mb-2">
                     Your Name
                   </label>
                   <input
@@ -89,7 +89,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     placeholder="Enter your full name"
-                    className="w-full px-4 py-3 md:px-5 md:py-4 bg-[#262626] border border-[#333333] rounded-lg text-white placeholder-[#808080] focus:outline-none focus:border-[#16a34a] focus:ring-2 focus:ring-[#16a34a]/20 transition-all duration-300"
+                    className="w-full px-4 py-3 md:px-5 md:py-4 bg-gray-50 border border-gray-200 rounded-lg text-black placeholder-gray-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all duration-300 font-serif"
                   />
                 </motion.div>
 
@@ -100,7 +100,7 @@ const Contact = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.4 }}
                 >
-                  <label htmlFor="email" className="block text-sm md:text-base font-semibold text-white mb-2">
+                  <label htmlFor="email" className="block text-sm md:text-base font-bold text-black mb-2">
                     Email Address
                   </label>
                   <input
@@ -111,7 +111,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     placeholder="your.email@example.com"
-                    className="w-full px-4 py-3 md:px-5 md:py-4 bg-[#262626] border border-[#333333] rounded-lg text-white placeholder-[#808080] focus:outline-none focus:border-[#16a34a] focus:ring-2 focus:ring-[#16a34a]/20 transition-all duration-300"
+                    className="w-full px-4 py-3 md:px-5 md:py-4 bg-gray-50 border border-gray-200 rounded-lg text-black placeholder-gray-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all duration-300 font-serif"
                   />
                 </motion.div>
 
@@ -122,7 +122,7 @@ const Contact = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.5 }}
                 >
-                  <label htmlFor="query" className="block text-sm md:text-base font-semibold text-white mb-2">
+                  <label htmlFor="query" className="block text-sm md:text-base font-bold text-black mb-2">
                     Your Message
                   </label>
                   <textarea
@@ -133,7 +133,7 @@ const Contact = () => {
                     required
                     rows="5"
                     placeholder="Tell us what you need help with..."
-                    className="w-full px-4 py-3 md:px-5 md:py-4 bg-[#262626] border border-[#333333] rounded-lg text-white placeholder-[#808080] focus:outline-none focus:border-[#16a34a] focus:ring-2 focus:ring-[#16a34a]/20 transition-all duration-300 resize-none"
+                    className="w-full px-4 py-3 md:px-5 md:py-4 bg-gray-50 border border-gray-200 rounded-lg text-black placeholder-gray-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all duration-300 resize-none font-serif"
                   />
                 </motion.div>
 
@@ -147,9 +147,8 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`cursor-pointer w-full sm:w-auto hover:scale-105 bg-linear-to-r from-[#16a34a] to-[#22c55e] text-[#262626] font-semibold py-3 md:py-4 px-6 rounded-lg text-base md:text-lg shadow-lg transition-all duration-300 transform active:scale-95 ${
-                      isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
-                    }`}
+                    className={`cursor-pointer w-full sm:w-auto hover:scale-105 bg-black text-white font-bold py-3 md:py-4 px-6 rounded-lg text-base md:text-lg shadow-lg transition-all duration-300 transform active:scale-95 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
+                      }`}
                   >
                     {isSubmitting ? (
                       <span className="flex items-center justify-center gap-2">
@@ -162,9 +161,6 @@ const Contact = () => {
                     ) : (
                       <span className="flex items-center justify-center gap-2">
                         Send Message
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
                       </span>
                     )}
                   </button>
@@ -176,12 +172,12 @@ const Contact = () => {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0 }}
-                    className="flex items-center gap-2 p-4 bg-[#16a34a]/10 border border-[#16a34a] rounded-lg"
+                    className="flex items-center gap-2 p-4 bg-green-50 border border-green-200 rounded-lg"
                   >
-                    <svg className="w-5 h-5 text-[#16a34a] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-green-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <p className="text-sm md:text-base text-[#16a34a] font-semibold">
+                    <p className="text-sm md:text-base text-green-800 font-semibold">
                       Message sent successfully! We'll get back to you soon.
                     </p>
                   </motion.div>
@@ -194,30 +190,30 @@ const Contact = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.7 }}
-                className="mt-8 pt-8 border-t border-[#333333]"
+                className="mt-8 pt-8 border-t border-gray-200"
               >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-center sm:text-left">
                   <div className="flex items-center justify-center sm:justify-start gap-3">
-                    <div className="w-10 h-10 bg-[#262626] rounded-full flex items-center justify-center">
-                      <svg className="w-5 h-5 text-[#16a34a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
+                      <svg className="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
                     <div>
-                      <p className="text-xs text-[#808080]">Email</p>
-                      <p className="text-sm md:text-base text-[#e5e5e5] font-medium">contact@slatebook.com</p>
+                      <p className="text-xs text-gray-500">Email</p>
+                      <p className="text-sm md:text-base text-black font-medium">contact@slatebook.com</p>
                     </div>
                   </div>
 
                   <div className="flex items-center justify-center sm:justify-start gap-3">
-                    <div className="w-10 h-10 bg-[#262626] rounded-full flex items-center justify-center">
-                      <svg className="w-5 h-5 text-[#16a34a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
+                      <svg className="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     </div>
                     <div>
-                      <p className="text-xs text-[#808080]">Response Time</p>
-                      <p className="text-sm md:text-base text-[#e5e5e5] font-medium">Within 24 hours</p>
+                      <p className="text-xs text-gray-500">Response Time</p>
+                      <p className="text-sm md:text-base text-black font-medium">Within 24 hours</p>
                     </div>
                   </div>
                 </div>

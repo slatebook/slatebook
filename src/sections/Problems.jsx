@@ -52,7 +52,7 @@ const Problems = () => {
   ];
 
   return (
-    <section id="problems" className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#1a1a1a]">
+    <section id="problems" className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-white/50">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -61,10 +61,10 @@ const Problems = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-4 md:mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4 md:mb-6">
             Why SlateBook?
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-[#e5e5e5] max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto font-serif">
             The problems every student faces with traditional notebooks
           </p>
         </motion.div>
@@ -73,13 +73,13 @@ const Problems = () => {
           {problems.map((problem, index) => (
             <Card key={index} delay={index * 0.1}>
               <div className="flex flex-col items-center text-center space-y-4">
-                <div className="text-[#16a34a]">
+                <div className="text-black">
                   {problem.icon}
                 </div>
-                <h3 className="text-lg md:text-xl font-semibold text-white">
+                <h3 className="text-lg md:text-xl font-bold text-black">
                   {problem.title}
                 </h3>
-                <p className="text-sm md:text-base text-[#e5e5e5] leading-relaxed">
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed font-serif">
                   {problem.description}
                 </p>
               </div>
